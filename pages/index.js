@@ -10,6 +10,17 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLSJBFP93V"></script>
+        <script>
+          dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-RLSJBFP93V');`,
+          }}
+        </script>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Olá pessoal, eu sou DESENVOLVEDOR WEB e CRIADOR DE CONTEÚDO]</p>
